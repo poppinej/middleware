@@ -2,26 +2,34 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7974357d-9b77-45a5-92c4-f0710569c1d8" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/api/src/main/java/aaaa.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/src/main/java/enums/BaseResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/src/main/java/enums/StatusCode.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/src/main/java/util/RedPacketUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/model/src/main/java/com/debug/middleware/model/entity/RedDetail.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/model/src/main/java/com/debug/middleware/model/entity/RedRecord.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/model/src/main/java/com/debug/middleware/model/entity/RedRobRecord.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/model/src/main/java/com/debug/middleware/model/mapper/RedDetailMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/model/src/main/java/com/debug/middleware/model/mapper/RedDetailMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/model/src/main/java/com/debug/middleware/model/mapper/RedRecordMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/model/src/main/java/com/debug/middleware/model/mapper/RedRecordMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/model/src/main/java/com/debug/middleware/model/mapper/RedRobRecordMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/model/src/main/java/com/debug/middleware/model/mapper/RedRobRecordMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/src/test/java/com/debug/middleware/server/RedPackageTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/model/src/main/java/com/debug/middleware/model/entity/dto/RedPacketDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/main/java/com/debug/middleware/server/controller/RedPacketController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/main/java/com/debug/middleware/server/service/IRedPacketService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/main/java/com/debug/middleware/server/service/IRedService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/main/java/com/debug/middleware/server/service/impl/IRedPacketServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/main/java/com/debug/middleware/server/service/impl/IRedServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/src/main/java/enums/BaseResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/api/src/main/java/enums/BaseResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/src/main/java/com/debug/middleware/model/mapper/RedRecordMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/model/src/main/java/com/debug/middleware/model/mapper/RedRecordMapper.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -29,11 +37,17 @@
         <option value="spring-beans.schema" />
         <option value="FxmlFile" />
         <option value="Enum" />
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1f2bLg3WPwR0dtaFEOHJtRUfHZg" />
@@ -70,7 +84,7 @@
       <recent name="D:\project\middleware\model\src\main\java\com\debug\middleware\model\mapper" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.RedPackageTest.divideRedPackage">
+  <component name="RunManager" selected="Spring Boot.MainApplication">
     <configuration name="RedPackageTest.divideRedPackage" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="server" />
       <extension name="coverage">
@@ -150,8 +164,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.RedPackageTest.divideRedPackage" />
         <item itemvalue="Spring Boot.MainApplication" />
+        <item itemvalue="JUnit.RedPackageTest.divideRedPackage" />
         <item itemvalue="JUnit.RedisTest.one" />
         <item itemvalue="JUnit.RedisTest.setTest" />
         <item itemvalue="JUnit.RedisTest.three" />
@@ -176,7 +190,8 @@
       <workItem from="1595935495862" duration="2225000" />
       <workItem from="1595937755757" duration="98000" />
       <workItem from="1595937863475" duration="3914000" />
-      <workItem from="1596108094786" duration="2045000" />
+      <workItem from="1596108094786" duration="2308000" />
+      <workItem from="1596453829250" duration="3191000" />
     </task>
     <task id="LOCAL-00001" summary="测试上传">
       <created>1595427713823</created>
@@ -213,7 +228,14 @@
       <option name="project" value="LOCAL" />
       <updated>1595941868684</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="添加抢红包相关实体类以及Mapper，以及红包分配算法的实现">
+      <created>1596110331972</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1596110331972</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -224,25 +246,26 @@
     <MESSAGE value="修改依赖" />
     <MESSAGE value="添加redis" />
     <MESSAGE value="避免缓存击透" />
-    <option name="LAST_COMMIT_MESSAGE" value="避免缓存击透" />
+    <MESSAGE value="添加抢红包相关实体类以及Mapper，以及红包分配算法的实现" />
+    <option name="LAST_COMMIT_MESSAGE" value="添加抢红包相关实体类以及Mapper，以及红包分配算法的实现" />
   </component>
   <component name="WindowStateProjectService">
     <state x="552" y="178" key="#Project_Structure" timestamp="1595425710791">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="552" y="178" key="#Project_Structure/0.0.1920.1040@0.0.1920.1040" timestamp="1595425710791" />
-    <state x="765" y="229" key="#com.intellij.ide.util.MemberChooser" timestamp="1596109133802">
+    <state x="765" y="229" key="#com.intellij.ide.util.MemberChooser" timestamp="1596454924544">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="765" y="229" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1596109133802" />
+    <state x="765" y="229" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1596454924544" />
     <state x="655" y="445" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1595937525030">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="655" y="445" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1595937525030" />
-    <state x="556" y="112" key="CommitChangelistDialog2" timestamp="1595941868183">
+    <state x="556" y="112" key="CommitChangelistDialog2" timestamp="1596457203069">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="556" y="112" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1595941868183" />
+    <state x="556" y="112" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1596457203069" />
     <state x="184" y="86" key="DiffContextDialog" timestamp="1595427724876">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -251,62 +274,62 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1595941458080" />
-    <state width="1877" height="367" key="GridCell.Tab.0.bottom" timestamp="1596110194721">
+    <state width="1877" height="56" key="GridCell.Tab.0.bottom" timestamp="1596457203084">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="367" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1596110194721" />
-    <state width="1877" height="367" key="GridCell.Tab.0.center" timestamp="1596110194721">
+    <state width="1877" height="56" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1596457203084" />
+    <state width="1877" height="56" key="GridCell.Tab.0.center" timestamp="1596457203084">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="367" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1596110194721" />
-    <state width="1877" height="367" key="GridCell.Tab.0.left" timestamp="1596110194721">
+    <state width="1877" height="56" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1596457203084" />
+    <state width="1877" height="56" key="GridCell.Tab.0.left" timestamp="1596457203084">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="367" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1596110194721" />
-    <state width="1877" height="367" key="GridCell.Tab.0.right" timestamp="1596110194721">
+    <state width="1877" height="56" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1596457203084" />
+    <state width="1877" height="56" key="GridCell.Tab.0.right" timestamp="1596457203084">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="367" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1596110194721" />
-    <state width="1877" height="367" key="GridCell.Tab.1.bottom" timestamp="1596110194721">
+    <state width="1877" height="56" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1596457203084" />
+    <state width="1877" height="56" key="GridCell.Tab.1.bottom" timestamp="1596457203085">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="367" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1596110194721" />
-    <state width="1877" height="367" key="GridCell.Tab.1.center" timestamp="1596110194721">
+    <state width="1877" height="56" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1596457203085" />
+    <state width="1877" height="56" key="GridCell.Tab.1.center" timestamp="1596457203085">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="367" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1596110194721" />
-    <state width="1877" height="367" key="GridCell.Tab.1.left" timestamp="1596110194721">
+    <state width="1877" height="56" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1596457203085" />
+    <state width="1877" height="56" key="GridCell.Tab.1.left" timestamp="1596457203084">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="367" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1596110194721" />
-    <state width="1877" height="367" key="GridCell.Tab.1.right" timestamp="1596110194721">
+    <state width="1877" height="56" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1596457203084" />
+    <state width="1877" height="56" key="GridCell.Tab.1.right" timestamp="1596457203085">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="367" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1596110194721" />
-    <state width="1877" height="176" key="GridCell.Tab.2.bottom" timestamp="1595941998828">
+    <state width="1877" height="56" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1596457203085" />
+    <state width="1877" height="56" key="GridCell.Tab.2.bottom" timestamp="1596457203085">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="176" key="GridCell.Tab.2.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1595941998828" />
-    <state width="1877" height="176" key="GridCell.Tab.2.center" timestamp="1595941998828">
+    <state width="1877" height="56" key="GridCell.Tab.2.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1596457203085" />
+    <state width="1877" height="56" key="GridCell.Tab.2.center" timestamp="1596457203085">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="176" key="GridCell.Tab.2.center/0.0.1920.1040@0.0.1920.1040" timestamp="1595941998828" />
-    <state width="1877" height="176" key="GridCell.Tab.2.left" timestamp="1595941998828">
+    <state width="1877" height="56" key="GridCell.Tab.2.center/0.0.1920.1040@0.0.1920.1040" timestamp="1596457203085" />
+    <state width="1877" height="56" key="GridCell.Tab.2.left" timestamp="1596457203085">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="176" key="GridCell.Tab.2.left/0.0.1920.1040@0.0.1920.1040" timestamp="1595941998828" />
-    <state width="1877" height="176" key="GridCell.Tab.2.right" timestamp="1595941998828">
+    <state width="1877" height="56" key="GridCell.Tab.2.left/0.0.1920.1040@0.0.1920.1040" timestamp="1596457203085" />
+    <state width="1877" height="56" key="GridCell.Tab.2.right" timestamp="1596457203085">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="176" key="GridCell.Tab.2.right/0.0.1920.1040@0.0.1920.1040" timestamp="1595941998828" />
+    <state width="1877" height="56" key="GridCell.Tab.2.right/0.0.1920.1040@0.0.1920.1040" timestamp="1596457203085" />
     <state x="440" y="94" key="SettingsEditor" timestamp="1595937853357">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="440" y="94" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1595937853357" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1595941875845">
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1596110391021">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1595941875845" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1596110391021" />
     <state x="759" y="297" key="chooseDestDirectoryDialog" timestamp="1595937417944">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
