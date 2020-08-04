@@ -12,6 +12,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.math.BigDecimal;
+
 @RestController
 @RequestMapping(value = "/redPacket")
 public class RedPacketController {
@@ -40,7 +42,27 @@ public class RedPacketController {
 
         return baseResponse;
 
+    }
 
+
+    @RequestMapping(value = "/rob")
+    public Object rob(Integer userId,String redId){
+
+        BaseResponse baseResponse = new BaseResponse(StatusCode.Success);
+
+        try{
+            BigDecimal val = iRedPacketService.rob(userId,redId);
+
+            baseResponse.setData(val);
+
+        }catch (Exception ex){
+
+            log.error("发红包发生异常"+ex.fillInStackTrace());
+            baseResponse = new BaseResponse(StatusCode.Fail.getCode(),"红包已被抢完！");
+        }
+
+
+        return baseResponse;
 
     }
 }

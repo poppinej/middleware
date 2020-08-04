@@ -2,6 +2,7 @@ package com.debug.middleware.server.service.impl;
 
 import com.debug.middleware.model.entity.RedDetail;
 import com.debug.middleware.model.entity.RedRecord;
+import com.debug.middleware.model.entity.RedRobRecord;
 import com.debug.middleware.model.entity.dto.RedPacketDto;
 import com.debug.middleware.model.mapper.RedDetailMapper;
 import com.debug.middleware.model.mapper.RedRecordMapper;
@@ -62,10 +63,20 @@ public class IRedServiceImpl implements IRedService {
             redDetailMapper.insertSelective(redDetail);
         }
 
+    }
+    @Async
+    @Transactional(rollbackFor = Exception.class)
+    @Override
+    public void robRedPacket(Integer userId, String redId, BigDecimal amount) {
 
+        RedRobRecord redRobRecord = new RedRobRecord();
 
+        redRobRecord.setUserId(userId);
+        redRobRecord.setRedPacket(redId);
+        redRobRecord.setAmount(amount);
+        redRobRecord.setRobTime(new Date());
 
-
+        redRobRecordMapper.insertSelective(redRobRecord);
 
 
 

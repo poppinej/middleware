@@ -33,7 +33,7 @@
       #{amount,jdbcType=DECIMAL}, #{robTime,jdbcType=TIMESTAMP}, #{isActive,jdbcType=TINYINT}
       )
   </insert>
-  <insert id="insertSelective" parameterType="com.debug.middleware.model.entity.RedRobRecord">
+  <insert id="insertSelective" useGeneratedKeys="true" keyProperty="id"  keyColumn="id" parameterType="com.debug.middleware.model.entity.RedRobRecord">
     insert into red_rob_record
     <trim prefix="(" suffix=")" suffixOverrides=",">
       <if test="id != null">
