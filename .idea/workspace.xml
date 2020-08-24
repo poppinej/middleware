@@ -2,11 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7974357d-9b77-45a5-92c4-f0710569c1d8" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/server/src/main/java/com/debug/middleware/server/entity/LoginEvent.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/src/main/java/com/debug/middleware/server/testEvent/Consumer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/src/main/java/com/debug/middleware/server/testEvent/Publisher.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/src/test/java/com/debug/middleware/server/EventTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/main/java/com/debug/middleware/server/config/RabbitmqConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/main/java/com/debug/middleware/server/entity/Person.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/main/java/com/debug/middleware/server/rabbitmq/consumer/BasicConsumer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/main/java/com/debug/middleware/server/rabbitmq/publisher/BasicPublisher.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/test/java/com/debug/middleware/server/RabbitmqTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/server/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/server/target/classes/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -80,7 +84,7 @@
       <recent name="D:\project\middleware\model\src\main\java\com\debug\middleware\model\mapper" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.EventTest.test">
+  <component name="RunManager" selected="JUnit.RabbitmqTest.test2">
     <configuration name="EventTest.test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="server" />
       <extension name="coverage">
@@ -92,6 +96,37 @@
       <option name="PACKAGE_NAME" value="com.debug.middleware.server" />
       <option name="MAIN_CLASS_NAME" value="com.debug.middleware.server.EventTest" />
       <option name="METHOD_NAME" value="test" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RabbitmqTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="server" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.debug.middleware.server.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.debug.middleware.server" />
+      <option name="MAIN_CLASS_NAME" value="com.debug.middleware.server.RabbitmqTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RabbitmqTest.test2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="server" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.debug.middleware.server.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.debug.middleware.server" />
+      <option name="MAIN_CLASS_NAME" value="com.debug.middleware.server.RabbitmqTest" />
+      <option name="METHOD_NAME" value="test2" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -113,38 +148,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="RedisTest.one" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="server" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.debug.middleware.server.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.debug.middleware.server" />
-      <option name="MAIN_CLASS_NAME" value="com.debug.middleware.server.RedisTest" />
-      <option name="METHOD_NAME" value="one" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="RedisTest.setTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="server" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.debug.middleware.server.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.debug.middleware.server" />
-      <option name="MAIN_CLASS_NAME" value="com.debug.middleware.server.RedisTest" />
-      <option name="METHOD_NAME" value="setTest" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="MainApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
       <module name="server" />
       <extension name="coverage">
@@ -160,11 +163,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.RabbitmqTest.test2" />
+        <item itemvalue="JUnit.RabbitmqTest" />
         <item itemvalue="JUnit.EventTest.test" />
         <item itemvalue="Spring Boot.MainApplication" />
         <item itemvalue="JUnit.RedPackageTest.divideRedPackage" />
-        <item itemvalue="JUnit.RedisTest.one" />
-        <item itemvalue="JUnit.RedisTest.setTest" />
       </list>
     </recent_temporary>
   </component>
@@ -189,7 +192,10 @@
       <workItem from="1596108094786" duration="2308000" />
       <workItem from="1596453829250" duration="3444000" />
       <workItem from="1596538115815" duration="4137000" />
-      <workItem from="1596712148156" duration="2571000" />
+      <workItem from="1596712148156" duration="3196000" />
+      <workItem from="1597834597853" duration="3027000" />
+      <workItem from="1597923590191" duration="2292000" />
+      <workItem from="1598267946686" duration="3811000" />
     </task>
     <task id="LOCAL-00001" summary="测试上传">
       <created>1595427713823</created>
@@ -247,7 +253,14 @@
       <option name="project" value="LOCAL" />
       <updated>1596542472715</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="模拟Spring事件">
+      <created>1596715680791</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1596715680791</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -261,7 +274,8 @@
     <MESSAGE value="添加抢红包相关实体类以及Mapper，以及红包分配算法的实现" />
     <MESSAGE value="添加分发红包接口" />
     <MESSAGE value="添加抢红包功能实现" />
-    <option name="LAST_COMMIT_MESSAGE" value="添加抢红包功能实现" />
+    <MESSAGE value="模拟Spring事件" />
+    <option name="LAST_COMMIT_MESSAGE" value="模拟Spring事件" />
   </component>
   <component name="WindowStateProjectService">
     <state x="552" y="178" key="#Project_Structure" timestamp="1595425710791">
@@ -276,10 +290,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="655" y="445" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1595937525030" />
-    <state x="556" y="112" key="CommitChangelistDialog2" timestamp="1596542472176">
+    <state x="556" y="112" key="CommitChangelistDialog2" timestamp="1596715680245">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="556" y="112" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1596542472176" />
+    <state x="556" y="112" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1596715680245" />
     <state x="184" y="86" key="DiffContextDialog" timestamp="1595427724876">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -288,22 +302,22 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1595941458080" />
-    <state width="1877" height="480" key="GridCell.Tab.0.bottom" timestamp="1596542489322">
+    <state width="1877" height="139" key="GridCell.Tab.0.bottom" timestamp="1598271769944">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="480" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1596542489322" />
-    <state width="1877" height="480" key="GridCell.Tab.0.center" timestamp="1596542489322">
+    <state width="1877" height="139" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1598271769944" />
+    <state width="1877" height="139" key="GridCell.Tab.0.center" timestamp="1598271769944">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="480" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1596542489322" />
-    <state width="1877" height="480" key="GridCell.Tab.0.left" timestamp="1596542489322">
+    <state width="1877" height="139" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1598271769944" />
+    <state width="1877" height="139" key="GridCell.Tab.0.left" timestamp="1598271769944">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="480" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1596542489322" />
-    <state width="1877" height="480" key="GridCell.Tab.0.right" timestamp="1596542489322">
+    <state width="1877" height="139" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1598271769944" />
+    <state width="1877" height="139" key="GridCell.Tab.0.right" timestamp="1598271769944">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="480" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1596542489322" />
+    <state width="1877" height="139" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1598271769944" />
     <state width="1877" height="480" key="GridCell.Tab.1.bottom" timestamp="1596542489322">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -340,18 +354,18 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="440" y="94" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1595937853357" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1596542477249">
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1596715686557">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1596542477249" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1596715686557" />
     <state x="759" y="297" key="chooseDestDirectoryDialog" timestamp="1595937417944">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="759" y="297" key="chooseDestDirectoryDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1595937417944" />
-    <state x="640" y="344" key="com.intellij.ide.util.TipDialog" timestamp="1596712148294">
+    <state x="640" y="344" key="com.intellij.ide.util.TipDialog" timestamp="1598267946888">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="640" y="344" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1596712148294" />
+    <state x="640" y="344" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1598267946888" />
     <state x="660" y="311" key="git4idea.merge.GitPullDialog" timestamp="1595427689988">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
