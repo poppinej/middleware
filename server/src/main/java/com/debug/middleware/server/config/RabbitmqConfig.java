@@ -106,6 +106,17 @@ public class RabbitmqConfig {
         return new Queue(Objects.requireNonNull(env.getProperty("mq.object.info.queue.name")),true);
     }
 
+    @Bean(name = "fanoutQueueOne")
+    public Queue fanoutQueueOne(){
+
+        return new Queue(Objects.requireNonNull(env.getProperty("mq.fanout.queue.one.name")),true);
+    }
+
+    @Bean(name = "fanoutQueueTwo")
+    public Queue fanoutQueueTwo(){
+
+        return new Queue(Objects.requireNonNull(env.getProperty("mq.fanout.queue.two.name")),true);
+    }
     @Bean
     public DirectExchange basicExchange(){
 
@@ -116,6 +127,12 @@ public class RabbitmqConfig {
     public DirectExchange objectExchange(){
 
         return new DirectExchange(env.getProperty("mq.object.info.exchange.name"),true,false);
+    }
+
+    @Bean
+    public DirectExchange fanoutExchange(){
+
+        return new DirectExchange(env.getProperty("mq.fanout.exchange.name"),true,false);
     }
 
 
@@ -130,6 +147,22 @@ public class RabbitmqConfig {
     public Binding objectBinding(){
 
         return BindingBuilder.bind(objectQueue()).to(objectExchange()).with(env.getProperty("mq.object.info.routing.key.name"));
+
+
+    }
+
+    @Bean
+    public BindingBuilder.DirectExchangeRoutingKeyConfigurer fanoutBindingOne(){
+
+        return BindingBuilder.bind(fanoutQueueOne()).to(fanoutExchange());
+
+
+    }
+
+    @Bean
+    public BindingBuilder.DirectExchangeRoutingKeyConfigurer fanoutBindingTwo(){
+
+        return BindingBuilder.bind(fanoutQueueTwo()).to(fanoutExchange());
 
 
     }
